@@ -33,7 +33,14 @@ function addProjectDetails(e) {
 
 function addProject(result) {
 		console.log(result.id)
-		$('#project' + result.id + " .details").html("foo");
+
+		var projectHTML = '<a href="#" class="thumbnail">' +
+	    '<img src="' + result['image'] + '" class="detailsImage">' +
+	    '<p>' + result['title'] + '</p>' +
+	    '<p><small>' + result['date'] + '</small></p></a>' +
+			'<p><small>' + result['addProjectDetails']; 
+
+		$('#project' + result.id + " .details").html(projectHTML);
 }
 
 /*
